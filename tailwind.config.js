@@ -12,6 +12,10 @@ module.exports = {
         blueDark: "#2F1893",
         blueBlack: "#1E0E62",
       },
+      backgroundImage: {
+        headphones: "url('/public/images/headphones.png')",
+        headphones2: "url('/public/images/Headphone2.png')",
+      },
     },
   },
   safelist: [
