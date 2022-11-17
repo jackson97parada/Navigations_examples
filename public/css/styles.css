@@ -1742,12 +1742,12 @@ input:checked + .toggle-bg{
   --tw-bg-opacity: 0.5;
 }
 
-.bg-headphones2{
-  background-image: url('/public/images/Headphone2.png');
-}
-
 .bg-headphones{
   background-image: url('/public/images/headphones.png');
+}
+
+.bg-headphones2{
+  background-image: url('/public/images/Headphone2.png');
 }
 
 .bg-cover{
