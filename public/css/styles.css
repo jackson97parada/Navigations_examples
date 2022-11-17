@@ -1743,11 +1743,11 @@ input:checked + .toggle-bg{
 }
 
 .bg-headphones{
-  background-image: url('/public/images/headphones.png');
+  background-image: url('../images/headphones.png');
 }
 
 .bg-headphones2{
-  background-image: url('/public/images/Headphone2.png');
+  background-image: url('../images/Headphone2.png');
 }
 
 .bg-cover{

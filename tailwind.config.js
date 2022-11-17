@@ -13,8 +13,8 @@ module.exports = {
         blueBlack: "#1E0E62",
       },
       backgroundImage: {
-        headphones: "url('/public/images/headphones.png')",
-        headphones2: "url('/public/images/Headphone2.png')",
+        headphones: "url('../images/headphones.png')",
+        headphones2: "url('../images/Headphone2.png')",
       },
     },
   },
