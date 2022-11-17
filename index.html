@@ -1,4 +1,3 @@
-<!-- npx tailwindcss -i ./src/input.css -o ./public/css/styles.css --watch -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,19 +8,54 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.3.4/dist/flowbite.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
     <link rel="stylesheet" href="./public/css/styles.css" />
     <title>Navigations</title>
   </head>
+  <!-- npx tailwindcss -i ./src/input.css -o ./public/css/styles.css --watch -->
+  <!-- httpswww.youtube.comwatchv=VcMqhRhzya8&t=5s&ab_channel=Gicodificador -->
   <body class="font-DM">
     <!-- First navigation -->
     <nav class="container mx-auto">
-      <div class="flex justify-between p-6">
+      <div class="flex flex-wrap justify-between p-6">
         <a
           href="#"
           class="text-blueDark my-auto text-2xl font-bold hover:text-blue-700 transition duration-200"
           >Startup 3</a
         >
-        <ul class="flex items-center gap-10">
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex items-center gap-10 w-full md:w-auto pt-3 md:pt-0 space-y-4 md:space-y-0"
+          id="navbar-default"
+        >
           <li>
             <a
               href="#"
@@ -59,14 +93,14 @@
             </a>
           </li>
         </ul>
-        <div class="flex gap-7">
+        <div class="flex flex-wrap gap-3 lg:gap-7 w-full md:w-auto">
           <button
-            class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+            class="text-blueDark font-medium pt-4 md:pt-0 w-full md:w-auto hover:text-blue-700 transition duration-200"
           >
             Sign In
           </button>
           <button
-            class="text-white font-medium bg-indigo-600 hover:bg-indigo-700 transition duration-200 px-6 py-2 rounded-full"
+            class="text-white font-medium w-full md:w-auto bg-indigo-600 hover:bg-indigo-700 transition duration-200 px-6 py-2 rounded-full"
           >
             Sign Up
           </button>
@@ -77,21 +111,129 @@
     <div class="divider"></div>
     <!-- Second navigation -->
     <nav class="container mx-auto">
-      <div class="flex justify-between p-6">
-        <div class="flex gap-32">
+      <div class="flex flex-wrap justify-between p-6">
+        <div class="flex flex-wrap lg:gap-32">
           <a
             href="#"
-            class="text-blueDark my-auto text-2xl font-bold hover:text-blue-700 transition duration-200"
+            class="text-blueDark my-auto pr-40 md:pr-5 lg:pr-0 text-2xl font-bold hover:text-blue-700 transition duration-200"
             >Startup 3</a
           >
-          <ul class="flex items-center gap-10">
+          <button
+            data-collapse-toggle="navbar-default-2"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default-2"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <ul
+            class="hidden md:flex items-center md:gap-4 lg:gap-10 w-full md:w-auto pt-3 md:pt-0 space-y-4 md:space-y-0"
+            id="navbar-default-2"
+          >
             <li>
               <a
                 href="#"
                 class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
-                >Home</a
+                >Products<i class="fa-solid fa-angle-down pl-2"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+                >Pricing</a
               >
             </li>
+            <li>
+              <a
+                href="#"
+                class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+                >Community</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="flex flex-wrap pt-4 w-full md:w-auto md:pt-0 gap-4 md:gap-7"
+        >
+          <button
+            class="text-blueDark font-medium text-start w-full md:w-auto hover:text-blue-700 transition duration-200"
+            id="navbar-default-2"
+          >
+            API
+          </button>
+          <button
+            class="text-blueDark font-medium text-start w-full md:w-auto hover:text-blue-700 transition duration-200"
+            id="navbar-default-2"
+          >
+            Help
+          </button>
+          <button
+            class="text-blueDark font-medium text-center w-full md:w-auto hover:text-blue-700 transition duration-200"
+          >
+            Login
+          </button>
+          <button
+            class="text-blueDark font-medium w-full md:w-auto border-2 border-gray-200 hover:bg-gray-200 transition duration-200 px-5 py-1.5 rounded-full"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Thirth navigation -->
+    <nav class="container mx-auto">
+      <div class="flex flex-wrap justify-between p-6">
+        <div
+          class="flex flex-wrap w-full md:w-auto md:mx-auto lg:mx-0 justify-between lg:gap-24"
+        >
+          <a
+            href="#"
+            class="text-blueDark my-auto md:mx-auto lg:mx-0 text-2xl font-bold hover:text-blue-700 transition duration-200"
+            >Startup 3</a
+          >
+          <button
+            data-collapse-toggle="navbar-default-3"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default-2"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <ul
+            class="hidden md:flex flex-wrap justify-center items-center py-4 lg:py-0 w-full lg:w-auto space-y-4 md:space-y-0 gap-10"
+            id="navbar-default-3"
+          >
             <li>
               <a
                 href="#"
@@ -103,24 +245,2885 @@
               <a
                 href="#"
                 class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+                >Downloads</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+                >Docs</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+                >Support</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
                 >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+                ><i class="fa-solid fa-magnifying-glass pr-3"></i>Search</a
               >
             </li>
           </ul>
         </div>
-        <div class="flex gap-7">
-          <button
-            class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+        <!-- ======== -->
+        <ul class="flex pt-4 md:pt-0 gap-10 md:mx-auto lg:mx-0">
+          <li>
+            <a href="#"
+              ><i
+                class="fa-brands fa-twitter text-gray-400 text-lg transition duration-200 hover:text-cyan-200"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i
+                class="fa-brands fa-facebook text-gray-400 text-lg transition duration-200 hover:text-blue-600"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i
+                class="fa-brands fa-google-plus-g text-gray-400 text-lg transition duration-200 hover:text-red-500"
+              ></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Fourth navigation -->
+    <nav class="container mx-auto">
+      <div class="flex flex-wrap justify-between p-6">
+        <div class="flex w-full md:w-auto justify-between lg:gap-24">
+          <a
+            href="#"
+            class="text-blueDark my-auto text-2xl font-bold hover:text-blue-700 transition duration-200"
+            >Startup 3</a
           >
-            Sign In
+          <button
+            data-collapse-toggle="navbar-default-4"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default-2"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <ul
+          class="hidden md:flex items-center pt-3 md:pt-0 space-y-4 md:space-y-0 gap-10"
+          id="navbar-default-4"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >How it Works</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >About</a
+            >
+          </li>
+        </ul>
+        <!-- ======== -->
+        <div class="flex flex-wrap w-full md:w-auto pt-4 md:pt-0 gap-6">
+          <button
+            class="text-blueDark w-full md:w-auto font-medium hover:text-blue-700 transition duration-200"
+          >
+            Login
           </button>
           <button
-            class="text-white font-medium bg-indigo-600 hover:bg-indigo-700 transition duration-200 px-6 py-2 rounded-full"
+            class="text-blueDark w-full md:w-auto font-medium border-2 border-gray-200 hover:bg-gray-200 transition duration-200 px-5 py-1.5 rounded-full"
           >
             Sign Up
           </button>
         </div>
       </div>
     </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Fifth navigation -->
+    <nav class="container mx-auto">
+      <div class="flex flex-wrap justify-between p-6">
+        <div class="flex justify-between w-full md:w-auto gap-24">
+          <a
+            href="#"
+            class="text-blueDark my-auto text-2xl font-bold hover:text-blue-700 transition duration-200"
+            >Startup 3</a
+          >
+          <button
+            data-collapse-toggle="navbar-default-5"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default-2"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <ul
+          class="hidden md:flex items-center space-y-4 md:space-y-0 pt-4 md:pt-0 gap-10"
+          id="navbar-default-5"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >About</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Sixth navigation -->
+    <nav class="container mx-auto">
+      <div class="flex flex-wrap justify-between p-6">
+        <div class="flex justify-between w-full md:w-auto gap-24">
+          <a
+            href="#"
+            class="text-blueDark my-auto text-2xl font-bold hover:text-blue-700 transition duration-200"
+            >Startup 3</a
+          >
+          <button
+            data-collapse-toggle="navbar-default-6"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default-2"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <ul
+          class="hidden md:flex items-center w-full md:w-auto space-y-4 md:space-y-0 pt-4 md:pt-0 lg:pt-4 gap-10"
+          id="navbar-default-6"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >Tour</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >About</a
+            >
+          </li>
+          <li>
+            <button
+              class="py-2 px-5 w-full md:w-auto text-white rounded-full bg-pink-500 hover:bg-pink-600"
+            >
+              Buy App
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Seventh navigation -->
+    <nav class="container mx-auto">
+      <div class="flex flex-wrap gap-4 md:gap-0 justify-between p-6">
+        <button
+          class="py-1.5 px-5 w-full md:w-auto rounded-full border-2 border-gray-200 text-blueDark font-semibold hover:bg-gray-200 transition duration-200"
+        >
+          Visit Tour
+        </button>
+        <a
+          href="#"
+          class="text-blueDark my-auto text-2xl font-bold hover:text-blue-700 transition duration-200"
+          >Startup 3</a
+        >
+        <button
+          data-collapse-toggle="navbar-default-7"
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="hidden md:flex flex-wrap" id="navbar-default-7">
+          <button
+            class="py-1.5 px-3 w-full md:w-auto text-start text-blueDark font-medium hover:text-blue-700 transition duration-200"
+          >
+            Sign In
+          </button>
+          <button
+            class="py-1.5 px-3 w-full md:w-auto text-start text-blueDark font-medium hover:text-blue-700 transition duration-200"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Eighth navigation -->
+    <nav class="container mx-auto">
+      <div class="flex flex-wrap justify-between p-6">
+        <a
+          href="#"
+          class="text-blueDark my-auto text-2xl font-bold hover:text-blue-700 transition duration-200"
+          >Startup 3</a
+        >
+        <button
+          data-collapse-toggle="navbar-default-8"
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex w-full md:w-auto items-center gap-8"
+          id="navbar-default-8"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >Tour</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >Prices</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >F.A.Q.</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >Support</a
+            >
+          </li>
+        </ul>
+        <div class="w-full md:w-auto">
+          <button
+            class="py-1.5 px-6 w-full md:w-auto text-blueDark font-medium hover:text-blue-700 transition duration-200"
+          >
+            Login
+          </button>
+          <button
+            class="py-1.5 px-5 w-full md:w-auto rounded-full border-2 border-gray-200 text-blueDark font-medium hover:bg-gray-200"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Nineth navigation -->
+    <nav class="container mx-auto">
+      <div class="flex flex-wrap justify-center p-6">
+        <button
+          data-collapse-toggle="navbar-default-9"
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex w-full md:w-auto items-center gap-8"
+          id="navbar-default-9"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-medium hover:text-blue-700 transition duration-200"
+              >Contact Us</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i
+                class="fa-brands fa-product-hunt text-lg text-blueDark hover:text-blue-700 transition duration-200"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i
+                class="fa-brands fa-apple text-lg text-blueDark hover:text-blue-700 transition duration-200"
+              ></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Tenth navigation -->
+    <nav class="container mx-auto">
+      <div
+        class="flex flex-wrap gap-4 md:gap-0 justify-center md:justify-between p-6"
+      >
+        <input
+          type="search"
+          name=""
+          id=""
+          placeholder="Search"
+          class="py-1.5 px-4 w-full md:w-auto font-medium rounded-full border-2 border-gray-200"
+        />
+        <a
+          href="#"
+          class="text-blueDark font-semibold text-2xl hover:text-blue-700 transition duration-200"
+          >Startup 3</a
+        >
+        <div class="w-full md:w-36"></div>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Eleventh navigation -->
+    <nav class="mx-auto px-9 bg-blueDark">
+      <div class="flex flex-wrap gap-4 md:gap-0 justify-between p-6">
+        <input
+          type="search"
+          name=""
+          id=""
+          placeholder="Search"
+          class="py-1.5 px-4 w-full md:w-auto font-medium rounded-full border-2 bg-transparent border-gray-200 border-opacity-20 placeholder-white placeholder-opacity-40 text-white"
+        />
+        <a
+          href="#"
+          class="text-white font-semibold text-2xl hover:text-gray-300 transition duration-200"
+          >Startup 3</a
+        >
+        <button
+          data-collapse-toggle="navbar-default-11"
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex w-full md:w-auto items-center gap-9"
+          id="navbar-default-11"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Subscribe</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Sign In</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Register</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Twelfth navigation -->
+    <nav class="mx-auto px-9 bg-blueDark">
+      <div class="flex flex-wrap justify-between p-6">
+        <button
+          data-collapse-toggle="navbar-default-12"
+          type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex order-2 md:order-none w-full md:w-auto items-center pt-3 md:pt-0 gap-10"
+          id="navbar-default-12"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Products<i class="fa-solid fa-angle-down pl-2"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Community</a
+            >
+          </li>
+        </ul>
+        <a
+          href="#"
+          class="text-white order-1 md:order-none font-semibold text-2xl hover:text-gray-300 transition duration-200"
+          >Startup 3</a
+        >
+        <div
+          class="flex flex-wrap w-full md:w-auto gap-3 md:gap-8 order-3 md:order-none"
+        >
+          <button
+            class="text-white w-full md:w-auto hover:text-gray-300 transition duration-200"
+          >
+            Login
+          </button>
+          <button
+            class="text-white w-full md:w-auto border-2 border-white border-opacity-20 hover:bg-white hover:bg-opacity-5 transition duration-200 px-6 py-1.5 rounded-full"
+          >
+            Sign In
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- thirtieth navigation -->
+    <nav class="mx-auto px-9 bg-blueDark">
+      <div class="flex justify-center p-6">
+        <ul class="flex items-center gap-6 lg:gap-12">
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 border-b-2 py-0.5 border-red-500 transition duration-200"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i
+                class="fa-brands fa-dribbble hover:text-gray-300 transition duration-200 text-white text-base"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i
+                class="fa-brands fa-behance hover:text-gray-300 transition duration-200 text-white text-base"
+              ></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Fortieth navigation -->
+    <nav class="mx-auto px-9 bg-blueDark">
+      <div class="flex flex-wrap justify-between p-6">
+        <button
+          data-collapse-toggle="navbar-default-14"
+          type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex w-full md:w-auto order-2 pt-3 md:pt-0 md:order-none items-center gap-10"
+          id="navbar-default-14"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Community</a
+            >
+          </li>
+        </ul>
+        <a
+          href="#"
+          class="text-white order-1 md:order-none font-semibold text-2xl hover:text-gray-300 transition duration-200"
+          >Startup 3</a
+        >
+        <div class="order-3 md:order-none">
+          <button
+            class="text-white py-2 px-3 w-full md:w-auto hover:text-gray-200"
+          >
+            Help
+          </button>
+          <button
+            class="text-white py-2 px-3 w-full md:w-auto hover:text-gray-200"
+          >
+            Login
+          </button>
+          <button
+            class="text-white py-2 px-6 w-full md:w-auto hover:text-gray-200 rounded-full bg-pink-600"
+          >
+            Sign In
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Fiftieth navigation -->
+    <nav class="mx-auto px-9 bg-blueDark">
+      <div class="flex items-center justify-between p-6">
+        <div class="flex items-center gap-10">
+          <i class="fa-solid fa-bars text-white"></i>
+          <a
+            href="#"
+            class="text-white font-semibold text-2xl hover:text-gray-300 transition duration-200"
+            >Startup 3</a
+          >
+        </div>
+        <i class="fa-solid fa-search text-white"></i>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Sixtieth navigation -->
+    <nav class="mx-auto px-9 bg-blueDark">
+      <div
+        class="flex md:items-center flex-wrap justify-between md:justify-around p-6 gap-6 md:gap-10"
+      >
+        <a
+          href="#"
+          class="text-white font-semibold text-2xl hover:text-gray-300 transition duration-200"
+          >Startup 3</a
+        >
+        <button
+          data-collapse-toggle="navbar-default-16"
+          type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex md:items-center gap-10"
+          id="navbar-default-16"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Tour</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              ><i class="fa-brands fa-dribbble text-lg"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              ><i class="fa-brands fa-instagram text-lg"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              ><i class="fa-brands fa-behance text-lg"></i
+            ></a>
+          </li>
+        </ul>
+        <button class="px-6 py-2 rounded-full text-white bg-teal-400">
+          Buy on App Store
+        </button>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Seventieth navigation -->
+    <nav class="mx-auto px-9 bg-blueDark">
+      <div class="flex flex-wrap justify-between p-6 gap-3 md:gap-10">
+        <a
+          href="#"
+          class="text-white md:mx-auto lg:mx-0 font-semibold text-2xl hover:text-gray-300 transition duration-200"
+          >Startup 3</a
+        >
+        <button
+          data-collapse-toggle="navbar-default-17"
+          type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex md:mx-auto lg:mx-0 w-full md:w-auto items-center gap-10"
+          id="navbar-default-17"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Prices</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Feedback</a
+            >
+          </li>
+          <button
+            class="px-5 py-1.5 rounded-full border-2 border-white border-opacity-25 text-white hover:bg-blue-700 transition duration-200"
+          >
+            Contact Us
+          </button>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >F.A.Q.</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- eighteen navigation -->
+    <nav class="mx-auto px-9 bg-blueDark">
+      <div
+        class="flex md:items-center flex-wrap justify-between p-6 gap-3 md:gap-10"
+      >
+        <a
+          href="#"
+          class="text-white font-semibold md:mx-auto lg:mx-0 text-2xl hover:text-gray-300 transition duration-200"
+          >Startup 3</a
+        ><button
+          data-collapse-toggle="navbar-default-18"
+          type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex w-full md:mx-auto lg:mx-0 md:w-auto items-center gap-10"
+          id="navbar-default-18"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Tour</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Prices</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >F.A.Q.</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Support</a
+            >
+          </li>
+          <input
+            type="search"
+            placeholder="Search"
+            class="px-4 py-1.5 rounded-full border-2 placeholder:text-white placeholder:opacity-40 border-white border-opacity-20 bg-transparent text-white"
+          />
+        </ul>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- Nineteen navigation -->
+    <nav class="mx-auto px-9 bg-blueDark">
+      <div
+        class="flex md:items-center flex-wrap justify-between p-6 gap-4 md:gap-10"
+      >
+        <a
+          href="#"
+          class="text-white font-semibold text-2xl hover:text-gray-300 transition duration-200"
+          >Startup 3</a
+        >
+        <button
+          data-collapse-toggle="navbar-default-19"
+          type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex w-full md:w-auto items-center gap-10"
+          id="navbar-default-19"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Tour</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <i
+                class="fa-brands fa-google-plus-g text-white text-lg hover:text-gray-300 transition duration-200"
+              ></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i
+                class="fa-brands fa-facebook text-white text-lg hover:text-gray-300 transition duration-200"
+              ></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i
+                class="fa-brands fa-twitter text-white text-lg hover:text-gray-300 transition duration-200"
+              ></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- twenty navigation -->
+    <nav class="mx-auto px-9 bg-blueDark">
+      <div
+        class="flex md:items-center flex-wrap md:text-center justify-between p-6 gap-3 md:gap-10"
+      >
+        <a
+          href="#"
+          class="text-white md:mx-auto lg:mx-0 md:w-full lg:w-auto font-semibold text-2xl hover:text-gray-300 transition duration-200"
+          >Startup 3</a
+        >
+        <button
+          data-collapse-toggle="navbar-default-20"
+          type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex w-full md:w-auto items-center gap-10"
+          id="navbar-default-20"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Get the App</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >F.A.Q.</a
+            >
+          </li>
+        </ul>
+        <div>
+          <button class="px-7 py-1.5 rounded-full text-white">Sign In</button>
+          <button
+            class="px-7 py-1.5 rounded-full border-2 border-white border-opacity-20 text-white hover:bg-blue-700 transition duration-200"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- twenty first navigation -->
+    <nav class="mx-auto px-9 bg-blueDark">
+      <div
+        class="flex items-center flex-wrap justify-between p-6 gap-3 md:gap-10"
+      >
+        <a
+          href="#"
+          class="text-white font-semibold text-2xl hover:text-gray-300 transition duration-200"
+          >Startup 3</a
+        >
+        <button
+          data-collapse-toggle="navbar-default-21"
+          type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex w-full md:w-auto items-center gap-10"
+          id="navbar-default-21"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Get the App</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 transition duration-200"
+              >F.A.Q.</a
+            >
+          </li>
+        </ul>
+        <div class="flex flex-wrap mx-auto lg:mx-0 gap-5">
+          <button
+            class="px-5 py-1.5 w-full md:w-auto rounded-full text-white border-2 border-white border-opacity-20 hover:bg-blue-700 transition duration-200"
+          >
+            Sign In
+          </button>
+          <button
+            class="px-4 py-1.5 w-full md:w-auto rounded-full bg-teal-400 border-2 border-white border-opacity-20 text-white hover:bg-teal-500 transition duration-200"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- ====================== -->
+    <!-- Twenty second navigation -->
+    <nav class="mx-auto px-6 border-b-2 border-gray-300 border-opacity-70">
+      <div class="flex flex-wrap justify-between p-9">
+        <a
+          href="#"
+          class="text-blueDark font-Poppin font-black text-2xl hover:text-blue-600 transition duration-200"
+          >Startup 3</a
+        >
+        <button
+          data-collapse-toggle="navbar-default-22"
+          type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex w-full md:w-auto items-center gap-8"
+          id="navbar-default-22"
+        >
+          <div>
+            <button
+              class="tracking-widest text-sm font-semibold text-blueDark hover:text-blue-600 transition duration-200 peer"
+            >
+              PRODUCTS<i class="fa-solid fa-angle-down ml-2"></i>
+            </button>
+            <div
+              class="hidden peer-focus:block absolute bg-white shadow-2xl p-3 border-x"
+            >
+              <li>
+                <a href="#" class="text-blueDark hover:text-gray-400"
+                  >Product 1</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-blueDark hover:text-gray-400"
+                  >Product 2</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-blueDark hover:text-gray-400"
+                  >Product 3</a
+                >
+              </li>
+            </div>
+          </div>
+          <div>
+            <button
+              class="tracking-widest text-sm font-semibold text-gray-400 hover:text-blue-600 transition duration-200 peer"
+            >
+              PRICING<i class="fa-solid fa-angle-down ml-2"></i>
+            </button>
+            <div
+              class="hidden peer-focus:block absolute bg-white shadow-2xl p-3 border-x"
+            >
+              <li>
+                <a href="#" class="text-blueDark hover:text-gray-400"
+                  >Pricing 1</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-blueDark hover:text-gray-400"
+                  >Pricing 2</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-blueDark hover:text-gray-400"
+                  >Pricing 3</a
+                >
+              </li>
+            </div>
+          </div>
+          <div>
+            <button
+              class="tracking-widest text-sm font-semibold text-gray-400 hover:text-blue-600 transition duration-200 peer"
+            >
+              COMMUNITY<i class="fa-solid fa-angle-down ml-2"></i>
+            </button>
+            <div
+              class="hidden peer-focus:block absolute bg-white shadow-2xl p-3 border-x"
+            >
+              <li>
+                <a href="#" class="text-blueDark hover:text-gray-400"
+                  >Community 1</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-blueDark hover:text-gray-400"
+                  >Community 2</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-blueDark hover:text-gray-400"
+                  >Community 3</a
+                >
+              </li>
+            </div>
+          </div>
+          <div>
+            <button
+              class="tracking-widest text-sm font-semibold text-gray-400 hover:text-blue-600 transition duration-200"
+            >
+              EVENTS
+            </button>
+          </div>
+        </ul>
+        <div
+          class="flex flex-wrap md:mx-auto lg:mx-0 md:pt-4 lg:pt-0 w-full md:w-auto gap-3 md:gap-5"
+        >
+          <button
+            class="px-4 py-2 w-full md:w-auto font-medium text-blueDark hover:text-blue-600 transition duration-200"
+          >
+            Sign In
+          </button>
+          <button
+            class="px-6 py-2 w-full md:w-auto font-medium rounded-full bg-blue-700 hover:bg-blue-600 transition duration-200 text-white"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="mx-auto p-9 flex flex-wrap md:text-start lg:justify-between md:justify-center"
+    >
+      <div class="flex flex-wrap justify-start pb-4 lg:pb-0 gap-9">
+        <ul class="flex flex-col gap-2.5">
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Jackets & Coats</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Hoodies</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >T-shirts & Vests</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Shirts</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Blazers & Suits</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Jeans</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Trousers</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Shorts</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Underwear</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Accessories</a
+            >
+          </li>
+        </ul>
+        <ul class="flex flex-col gap-2.5">
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Dresses
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Swimwear
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Tops
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Basics
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Knitwear
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Lingerie
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Nightwear
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Sportwear
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Beauty
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Shoes</a
+            >
+          </li>
+        </ul>
+        <ul class="flex flex-col gap-2.5 lg:ml-16">
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Jumpsuit
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Rompers
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Skirts
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Waistcoats
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Sweatshirts
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Hoodies
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Maternity Wear
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Nightwear
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Jeans
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-blueDark font-semibold text-lg px-4 hover:shadow-xl transition duration-200 py-1.5 rounded-lg hover:bg-gray-200"
+              >Knitwear</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div
+        class="mr-6 p-9 min-w-full w-[470px] md:min-w-0 h-[350px] min-h-full md:min-h-0 bg-center bg-[url('/public/images/headphones.png')] bg-no-repeat"
+      >
+        <div class="p-5 md:mr-48 flex flex-col gap-2">
+          <span
+            class="text-black text-opacity-50 font-bold text-sm tracking-widest"
+            >NEW STUFF</span
+          >
+          <h1 class="text-[#1E0E62] text-[1.35rem] font-medium">
+            Chek It! Our New Products for Eveyone
+          </h1>
+        </div>
+        <button
+          class="px-7 py-3 ml-5 mt-10 text-white text-lg bg-blue-700 rounded-full hover:shadow-xl hover:bg-blue-600 transition duration-200"
+        >
+          Explore
+        </button>
+      </div>
+    </div>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- ====================== -->
+    <!-- Twenty three navigation -->
+    <nav
+      class="mx-auto px-10 pl-12 border-b-2 border-gray-300 border-opacity-70"
+    >
+      <div
+        class="flex flex-wrap justify-between items-center md:space-y-3 lg:space-y-0 p-9"
+      >
+        <a
+          href="#"
+          class="text-[#1E0E62] font-Poppin md:mx-auto lg:mx-0 font-black text-2xl hover:text-blue-600 transition duration-200"
+          >Startup 3</a
+        >
+        <button
+          data-collapse-toggle="navbar-default-23"
+          type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex w-full md:w-auto md:mx-auto lg:mx-0 space-y-3 py-3 md:space-y-0 md:py-0 gap-10"
+          id="navbar-default-23"
+        >
+          <li class="text-blueBlack">
+            <a href="#" class="font-medium"
+              >Products<i class="fa-solid fa-angle-down ml-2"></i
+            ></a>
+          </li>
+          <li
+            class="text-blueBlack opacity-30 hover:border-b hover:border-blueDark transition duration-200"
+          >
+            <a href="#">Downloads</a>
+          </li>
+          <li
+            class="text-blueBlack opacity-30 hover:border-b hover:border-blueDark transition duration-200"
+          >
+            <a href="#">Docs</a>
+          </li>
+          <li
+            class="text-blueBlack opacity-30 hover:border-b hover:border-blueDark transition duration-200"
+          >
+            <a href="#">Support</a>
+          </li>
+          <li
+            class="text-blueBlack opacity-30 hover:border-b hover:border-blueDark transition duration-200"
+          >
+            <a href="#">Blog</a>
+          </li>
+          <li
+            class="text-blueBlack opacity-30 hover:border-b hover:border-blueDark transition duration-200"
+          >
+            <a href="#"><i class="fa-solid fa-search pr-2"></i>Search</a>
+          </li>
+        </ul>
+        <ul class="flex gap-8 text-blueBlack md:mx-auto lg:mx-0">
+          <li>
+            <a href="#"
+              ><i
+                class="fa-brands fa-twitter text-lg hover:text-cyan-300 transition duration-200"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i
+                class="fa-brands fa-facebook text-lg hover:text-blue-600 transition duration-200"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i
+                class="fa-brands fa-google-plus-g text-lg hover:text-red-600 transition duration-200"
+              ></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="mx-auto p-8 flex flex-wrap gap-6 pl-4 mb-10">
+      <ul class="flex flex-col gap-2.5 md:pl-12 pt-3 mx-auto md:mx-0">
+        <li>
+          <a
+            href="#"
+            class="text-blueDark font-semibold text-lg transition duration-200 px-4"
+            >All Categories</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 text-base transition duration-200 px-4 hover:text-blue-600"
+            >T-shirts & Vests</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 text-base transition duration-200 px-4 hover:text-blue-600"
+            >Tops</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 text-base transition duration-200 px-4 hover:text-blue-600"
+            >Basics</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 text-base transition duration-200 px-4 hover:text-blue-600"
+            >Knitwear</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 text-base transition duration-200 px-4 hover:text-blue-600"
+            >T-shirts & Vests</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 text-base transition duration-200 px-4 hover:text-blue-600"
+            >Nightwear</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 text-base transition duration-200 px-4 hover:text-blue-600"
+            >Sportwear</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-400 text-base transition duration-200 px-4 hover:text-blue-600"
+            >Sweatshirts</a
+          >
+        </li>
+      </ul>
+      <div
+        id="default-carousel"
+        class="relative lg:pr-3 mx-auto md:mx-0"
+        data-carousel="slide"
+      >
+        <!-- Carousel wrapper -->
+        <div
+          class="relative overflow-hidden rounded-lg w-[300px] h-[350px] md:w-[500px] lg:w-[655px] lg:h-[460px]"
+        >
+          <!-- Item 1 -->
+          <div
+            class="hidden duration-700 ease-in-out"
+            data-carousel-item="active"
+          >
+            <img
+              src="./public/images/orange.png"
+              class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="./public/images/wasa.jpg"
+              class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="./public/images/icons8.jpg"
+              class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 4 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="./public/images/brooke.jpg"
+              class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 5 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="./public/images/alyson.jpg"
+              class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+        </div>
+        <!-- Slider indicators -->
+        <div
+          class="absolute z-30 flex space-x-3 md:translate-x-1 right-1/4 -bottom-10 md:left-1/2"
+        >
+          <button
+            type="button"
+            class="w-2.5 h-2.5 rounded-full enabled:bg-blueDark"
+            aria-current="false"
+            aria-label="Slide 1"
+            data-carousel-slide-to="0"
+          ></button>
+          <button
+            type="button"
+            class="w-2.5 h-2.5 rounded-full enabled:bg-gray-300"
+            aria-current="false"
+            aria-label="Slide 2"
+            data-carousel-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            class="w-2.5 h-2.5 rounded-full enabled:bg-gray-300"
+            aria-current="false"
+            aria-label="Slide 3"
+            data-carousel-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            class="w-2.5 h-2.5 rounded-full enabled:bg-gray-300"
+            aria-current="false"
+            aria-label="Slide 3"
+            data-carousel-slide-to="3"
+          ></button>
+          <button
+            type="button"
+            class="w-2.5 h-2.5 rounded-full enabled:bg-gray-300"
+            aria-current="false"
+            aria-label="Slide 3"
+            data-carousel-slide-to="4"
+          ></button>
+        </div>
+      </div>
+      <div
+        class="lg:pl-16 lg:items-start pt-10 lg:pt-5 flex flex-wrap flex-col md:flex-row md:justify-start items-center lg:flex-col gap-5"
+      >
+        <h1
+          class="text-lg text-blueBlack font-medium text-center md:w-full lg:w-auto"
+        >
+          Ecommerce stuff concepts
+        </h1>
+        <div class="flex gap-4">
+          <img src="./public/images/shoe.png" alt="shoe" />
+          <div class="w-[140px] h-[120px] lg:w-40">
+            <h1
+              class="text-sm tracking-widest pt-1 text-blueBlack font-semibold"
+            >
+              SHOES
+            </h1>
+            <p
+              class="text-sm text-gray-400 font-medium leading-[22px] lg:pr-16"
+            >
+              Find your perfect sport wear for ever and ever
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <img src="./public/images/laptop.png" alt="laptop" />
+          <div class="w-[140px] h-[120px] lg:w-40">
+            <h1
+              class="text-sm tracking-widest pt-1 text-blueBlack font-semibold"
+            >
+              COMPUTERS
+            </h1>
+            <p
+              class="text-sm text-gray-400 font-medium leading-[22px] lg:pr-16"
+            >
+              The biggest choise of new laptops for members
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <img src="./public/images/headphone.png" alt="headphone" />
+          <div class="w-[140px] h-[120px] lg:w-40">
+            <h1
+              class="text-sm tracking-widest pt-1 text-blueBlack font-semibold"
+            >
+              HEADSETS
+            </h1>
+            <p
+              class="text-sm text-gray-400 font-medium leading-[22px] lg:pr-16"
+            >
+              An Awesome assortment of hot headsets every week
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- ====================== -->
+    <!-- Twenty four navigation -->
+    <nav
+      class="mx-auto px-10 md:pl-20 border-b-2 border-gray-300 border-opacity-70"
+    >
+      <div class="flex flex-wrap justify-between items-center p-9">
+        <a
+          href="#"
+          class="text-[#1E0E62] font-Poppin font-black text-2xl hover:text-blue-600 transition duration-200"
+          >Startup 3</a
+        >
+        <button
+          data-collapse-toggle="navbar-default-24"
+          type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default-2"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <ul
+          class="hidden md:flex gap-10 space-y-3 md:space-y-0 py-2 md:py-0 lg:ml-44"
+          id="navbar-default-24"
+        >
+          <li class="text-blueBlack">
+            <a href="#" class="font-medium"
+              >Products<i class="fa-solid fa-angle-down ml-2"></i
+            ></a>
+          </li>
+          <li
+            class="text-blueBlack opacity-30 hover:border-b hover:border-blueDark transition duration-200"
+          >
+            <a href="#">Pricing</a>
+          </li>
+          <li
+            class="text-blueBlack opacity-30 hover:border-b hover:border-blueDark transition duration-200"
+          >
+            <a href="#">Community</a>
+          </li>
+        </ul>
+        <ul
+          class="flex flex-wrap items-center mx-auto lg:mx-0 pt-3 lg:pt-0 justify-center gap-4 lg:gap-10 text-blueBlack"
+        >
+          <li>
+            <a href="#" class="font-medium">API</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium">Help</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium">Login</a>
+          </li>
+          <li class="w-full md:w-auto">
+            <button
+              class="px-5 py-1.5 border-2 w-full md:w-auto border-opacity-30 border-gray-400 rounded-full text-base font-bold hover:bg-blueBlack hover:bg-opacity-70 transition duration-300 hover:text-white"
+            >
+              Sign Up
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="mx-auto flex flex-wrap lg:flex-nowrap md:justify-center lg:justify-start p-10 lg:pl-28"
+    >
+      <div class="grid grid-cols-2 gap-5 lg:gap-10">
+        <div>
+          <img src="./public/images/Products-4.png" />
+          <h1
+            class="text-sm md:text-[22px] text-blueBlack font-medium pt-4 pb-3"
+          >
+            Hottest Deal
+          </h1>
+          <p class="text-sm text-gray-400 font-medium md:w-52 pb-4 lg:pb-0">
+            Great Deals happening right now. Choose what you want
+          </p>
+        </div>
+        <div>
+          <img src="./public/images/Products-1.png" />
+          <h1
+            class="text-sm md:text-[22px] text-blueBlack font-medium pt-4 pb-3"
+          >
+            Deal of the Day
+          </h1>
+          <p class="text-sm text-gray-400 font-medium md:w-52 pb-4 lg:pb-0">
+            Great Deals only in our store every week for you
+          </p>
+        </div>
+        <div>
+          <img src="./public/images/Products-2.png" />
+          <h1
+            class="text-sm md:text-[22px] text-blueBlack font-medium pt-4 pb-3"
+          >
+            Weekly Sales
+          </h1>
+          <p class="text-sm text-gray-400 font-medium md:w-52 pb-4 lg:pb-0">
+            This week’s best deals, all in one place right now
+          </p>
+        </div>
+        <div>
+          <img src="./public/images/Products-3.png" />
+          <h1
+            class="text-sm md:text-[22px] text-blueBlack font-medium pt-4 pb-3"
+          >
+            Bes Buy Outlet
+          </h1>
+          <p class="text-sm text-gray-400 font-medium md:w-52 pb-4 lg:pb-0">
+            Deals designed especially for our store and you
+          </p>
+        </div>
+      </div>
+      <div class="lg:pl-[140px] flex flex-wrap justify-center lg:justify-start">
+        <h1
+          class="text-[32px] text-blueBlack text-center lg:text-start font-bold w-full lg:w-auto"
+        >
+          All Categories
+        </h1>
+        <div class="flex flex-wrap gap-16 lg:gap-24 pt-4">
+          <ul class="text-blueDark font-normal flex flex-col gap-3">
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Marshmellow</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Coockies</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Ice Creams</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Cakes</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Candys</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Creams</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Chocolate</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Shugarless</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Muffins</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Lolipops</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Coockies</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Shugarless</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Shugarless</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Desserts</a
+              >
+            </li>
+          </ul>
+          <ul class="text-blueDark font-normal flex flex-col gap-3">
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Candys</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Chocolate</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Muffins</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Lolipops</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Marshmellow</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Desserts</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Coockies</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Shugarless</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Ice Creams</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Cakes</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Shugarless</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Marshmellow</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Muffins</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Creams</a
+              >
+            </li>
+          </ul>
+          <ul class="text-blueDark font-normal flex flex-col gap-3">
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Shugarless
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Ice Creams
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Cakes
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Creams
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Muffins
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Chocolate
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Lolipops
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Shugarless
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Marshmellow
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Muffins
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Coockies
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Shugarless
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Desserts
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="hover:border-b hover:border-blueDark transition duration-300"
+                >Ice Creams
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- ====================== -->
+    <!-- Twenty five navigation -->
+    <nav
+      class="mx-auto flex flex-wrap justify-between items-center p-10 md:px-28 border-b-2 border-gray-300 border-opacity-40 bg-blueDark"
+    >
+      <!-- =========== -->
+      <ul
+        class="hidden md:flex w-full md:w-auto gap-10 order-2 lg:order-none"
+        id="navbar-default-25"
+      >
+        <li>
+          <a href="#" class="font-base text-white"
+            >Products<i class="fa-solid fa-angle-down ml-2"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white opacity-60 hover:border-b-2 hover:border-gray-400 transition duration-500"
+            >Pricing</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white opacity-60 hover:border-b-2 hover:border-gray-400 transition duration-500"
+            >Community</a
+          >
+        </li>
+      </ul>
+      <!-- ========= -->
+      <a
+        href="#"
+        class="text-white font-Poppin font-bold order-1 lg:order-none text-2xl mr-10 hover:text-blue-600 transition duration-200"
+        >Startup 3</a
+      >
+      <button
+        data-collapse-toggle="navbar-default-25"
+        type="button"
+        class="inline-flex items-center order-1 lg:order-none p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default-2"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-6 h-6"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <!-- ========= -->
+      <div
+        class="flex gap-2 flex-wrap w-full md:w-auto md:mx-auto lg:mx-0 md:pt-4 lg:pt-0 order-3 lg:order-none"
+      >
+        <button class="px-6 py-1.5 w-full md:w-auto text-white">Login</button>
+        <button
+          class="px-6 py-1.5 text-white w-full md:w-auto border-2 border-gray-400 border-opacity-60 rounded-full hover:bg-blue-600 transition duration-300"
+        >
+          Sign In
+        </button>
+      </div>
+    </nav>
+    <!-- ====================== -->
+    <div class="mx-auto flex flex-wrap p-10 pb-16 px-28 bg-blueDark">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 md:mx-auto lg:mx-0 lg:grid-cols-4 lg:grid-rows-2 gap-x-36 gap-y-16 pt-4"
+      >
+        <div>
+          <img
+            src="./public/images/images-25/16-devices-phone-cellphone.png"
+            alt=""
+          />
+          <h1 class="text-white text-lg pt-5 pb-2">Smartphones</h1>
+          <p class="text-white text-sm text-opacity-60 w-[155px]">
+            Top technology in our store. Hurry up for sales
+          </p>
+        </div>
+        <div>
+          <img
+            src="./public/images/images-25/18-devices-computer-notebook-screen-portable.png"
+            alt=""
+          />
+          <h1 class="text-white text-lg pt-5 pb-2">Laptops</h1>
+          <p class="text-white text-sm text-opacity-60 w-36">
+            The powerfull laptops for our members
+          </p>
+        </div>
+        <div>
+          <img
+            src="./public/images/images-25/25-devices-headphones-sound-music.png"
+            alt=""
+          />
+          <h1 class="text-white text-lg pt-5 pb-2">Headsets</h1>
+          <p class="text-white text-sm text-opacity-60 w-36">
+            High sound quality headphones for you
+          </p>
+        </div>
+        <div>
+          <img
+            src="./public/images/images-25/26-devices-cam-camera.png"
+            alt=""
+          />
+          <h1 class="text-white text-lg pt-5 pb-2">Webcams</h1>
+          <p class="text-white text-sm text-opacity-60 w-36">
+            Show up yourself with cool webcams
+          </p>
+        </div>
+        <div>
+          <img
+            src="./public/images/images-25/11-devices-film-camera-photograph.png"
+            alt=""
+          />
+          <h1 class="text-white text-lg pt-5 pb-2">GoPro Cams</h1>
+          <p class="text-white text-sm text-opacity-60 w-36">
+            Action cam. Capture. Create. Share.
+          </p>
+        </div>
+        <div>
+          <img
+            src="./public/images/images-25/23-devices-mouse-cursor-electronic.png"
+            alt=""
+          />
+          <h1 class="text-white text-lg pt-5 pb-2">Mouses</h1>
+          <p class="text-white text-sm text-opacity-60 w-36">
+            Optical, Wireless, Gaming Mouses
+          </p>
+        </div>
+        <div>
+          <img
+            src="./public/images/images-25/52-devices-projector-video-image.png"
+            alt=""
+          />
+          <h1 class="text-white text-lg pt-5 pb-2">Projectors</h1>
+          <p class="text-white text-sm text-opacity-60 w-36">
+            HighRes Projectors with Built-In TV
+          </p>
+        </div>
+        <div>
+          <img
+            src="./public/images/images-25/20-devices-monitor-pc-screen.png"
+            alt=""
+          />
+          <h1 class="text-white text-lg pt-5 pb-2">Monitors</h1>
+          <p class="text-white text-sm text-opacity-60 w-36">
+            QHD resolution widescreen monitors
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- ====================== -->
+    <!-- Twenty six navigation -->
+    <nav
+      class="mx-auto flex flex-wrap justify-between items-center bg-blueDark border-b-2 border-gray-400 border-opacity-60 p-10 md:pl-28 md:pr-16"
+    >
+      <!-- ========= -->
+
+      <a
+        href="#"
+        class="text-white font-Poppin md:mx-auto lg:mx-0 font-bold text-2xl mr-10 hover:text-blue-600 transition duration-200"
+        >Startup 3</a
+      >
+      <button
+        data-collapse-toggle="navbar-default-26"
+        type="button"
+        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default-2"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-6 h-6"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <!-- ========= -->
+      <ul
+        class="hidden md:flex md:mx-auto lg:mx-0 w-full md:w-auto items-center gap-6 lg:gap-10 text-white"
+        id="navbar-default-26"
+      >
+        <li>
+          <a href="#" class="font-base text-white"
+            >Shop<i class="fa-solid fa-angle-down ml-2"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white text-opacity-60 hover:border-b-2 hover:border-white hover:border-opacity-70"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white text-opacity-60 hover:border-b-2 hover:border-white hover:border-opacity-70"
+            >Prices</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white text-opacity-60 hover:border-b-2 hover:border-white hover:border-opacity-70"
+            >Blog</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white text-opacity-60 hover:border-b-2 hover:border-white hover:border-opacity-70"
+            >Feedback</a
+          >
+        </li>
+        <li>
+          <button
+            class="px-5 py-1.5 rounded-full border-2 border-white border-opacity-30 hover:bg-blue-600 transition duration-200"
+          >
+            Contact Us
+          </button>
+        </li>
+        <li><a href="">F.A.Q.</a></li>
+      </ul>
+    </nav>
+    <!-- ====================== -->
+    <div
+      class="mx-auto flex flex-wrap gap-14 py-14 px-8 lg:pl-24 md:pr-10 bg-blueDark"
+    >
+      <!-- ===================== -->
+      <ul class="flex flex-col md:pl-20 lg:pl-0 gap-3">
+        <li>
+          <h1 class="tracking-[2px] px-3.5 text-sm text-white font-medium">
+            CATEGORIES
+          </h1>
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white text-opacity-70 text-lg px-3.5 py-1.5 rounded-[10px] hover:bg-white hover:bg-opacity-30 transition duration-200"
+            >Computers</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white text-opacity-70 text-lg px-3.5 py-1.5 rounded-[10px] hover:bg-white hover:bg-opacity-30 transition duration-200"
+            >Keyboards</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white text-opacity-70 text-lg px-3.5 py-1.5 rounded-[10px] hover:bg-white hover:bg-opacity-30 transition duration-200"
+            >Tablets</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white text-opacity-70 text-lg px-3.5 py-1.5 rounded-[10px] hover:bg-white hover:bg-opacity-30 transition duration-200"
+            >Memory Cards</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white text-opacity-70 text-lg px-3.5 py-1.5 rounded-[10px] hover:bg-white hover:bg-opacity-30 transition duration-200"
+            >Motherboards</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white text-opacity-70 text-lg px-3.5 py-1.5 rounded-[10px] hover:bg-white hover:bg-opacity-30 transition duration-200"
+            >Printers</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white text-opacity-70 text-lg px-3.5 py-1.5 rounded-[10px] hover:bg-white hover:bg-opacity-30 transition duration-200"
+            >Scanners</a
+          >
+        </li>
+        <li>
+          <a
+            href=""
+            class="text-white text-opacity-70 text-lg px-3.5 py-1.5 rounded-[10px] hover:bg-white hover:bg-opacity-30 transition duration-200"
+            >3G Modems</a
+          >
+        </li>
+      </ul>
+      <!-- ===================== -->
+      <div class="md:mx-auto lg:mx-0">
+        <div id="carousel" class="relative" data-carousel="slide">
+          <!-- Carousel Wrapper -->
+          <div class="relative h-64 w-full p-5 overflow-hidden rounded-lg">
+            <div class="absolute z-30">
+              <p class="text-[22px] text-blueBlack font-medium w-60">
+                You can order any stuff in our online shop
+              </p>
+              <p
+                class="text-blueBlack text-sm w-40 font-medium text-opacity-70 pt-2 pl-3"
+              >
+                Try it yourself and get 10% discount
+              </p>
+            </div>
+            <!-- ITEM 1 -->
+            <div
+              class="duration-700 ease-in-out transition-all transform -translate-x-full hidden"
+              data-carousel-item="active"
+            >
+              <img
+                src="./public/images/images-26/Mouse.png"
+                class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt=""
+              />
+            </div>
+            <!-- ITEM 2 -->
+            <div
+              class="duration-700 ease-in-out absolute transition-all transform -translate-x-full"
+              data-carousel-item
+            >
+              <img
+                src="./public/images/images-26/Laptop.jpg"
+                class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt=""
+              />
+            </div>
+            <!-- ITEM 3 -->
+            <div
+              class="duration-700 ease-in-out absolute transition-all transform -translate-x-full"
+              data-carousel-item
+            >
+              <img
+                src="./public/images/images-26/Laptop2.jpg"
+                class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt=""
+              />
+            </div>
+            <!-- ITEM 4 -->
+            <div
+              class="duration-700 ease-in-out absolute transition-all transform -translate-x-full"
+              data-carousel-item
+            >
+              <img
+                src="./public/images/images-26/Laptop3.jpg"
+                class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt=""
+              />
+            </div>
+            <!-- ITEM 5 -->
+            <div
+              class="duration-700 ease-in-out absolute transition-all transform -translate-x-full"
+              data-carousel-item
+            >
+              <img
+                src="./public/images/images-26/Laptop4.jpg"
+                class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt=""
+              />
+            </div>
+          </div>
+          <!-- Carousel indicators -->
+          <div class="absolute z-30 flex px-5 space-x-3 translate-x-1 bottom-5">
+            <!-- INDICATOR 1 -->
+            <button
+              type="button"
+              class="w-2.5 h-2.5 rounded-full enabled:bg-transparent enabled:border-2 enabled:border-gray-400 enabled:hover:bg-blueBlack enabled:hover:border-blueBlack"
+              aria-current="false"
+              aria-label="Slide 1"
+              data-carousel-slide-to="0"
+            ></button>
+            <!-- INDICATOR 2 -->
+            <button
+              type="button"
+              class="w-2.5 h-2.5 rounded-full enabled:bg-transparent enabled:border-2 enabled:border-gray-400 enabled:hover:bg-blueBlack enabled:hover:border-blueBlack"
+              aria-current="false"
+              aria-label="Slide 2"
+              data-carousel-slide-to="1"
+            ></button>
+            <!-- INDICATOR 3 -->
+            <button
+              type="button"
+              class="w-2.5 h-2.5 rounded-full enabled:bg-transparent enabled:border-2 enabled:border-gray-400 enabled:hover:bg-blueBlack enabled:hover:border-blueBlack"
+              aria-current="false"
+              aria-label="Slide 3"
+              data-carousel-slide-to="2"
+            ></button>
+            <!-- INDICATOR 4 -->
+            <button
+              type="button"
+              class="w-2.5 h-2.5 rounded-full enabled:bg-transparent enabled:border-2 enabled:border-gray-400 enabled:hover:bg-blueBlack enabled:hover:border-blueBlack"
+              aria-current="false"
+              aria-label="Slide 4"
+              data-carousel-slide-to="3"
+            ></button>
+            <!-- INDICATOR 5 -->
+            <button
+              type="button"
+              class="w-2.5 h-2.5 rounded-full enabled:bg-transparent enabled:border-2 enabled:border-gray-400 enabled:hover:bg-blueBlack enabled:hover:border-blueBlack"
+              aria-current="false"
+              aria-label="Slide 5"
+              data-carousel-slide-to="4"
+            ></button>
+          </div>
+        </div>
+        <!-- =============== -->
+        <div class="flex gap-4 md:gap-6 mt-8">
+          <div>
+            <h1 class="text-[12px] md:text-lg text-white md:ml-2 pb-2">
+              Smart watches
+            </h1>
+            <img src="./public/images/images-26/Smartwatch.png" alt="" />
+          </div>
+          <div>
+            <h1 class="text-sm md:text-lg text-white md:ml-2 pb-2">Cameras</h1>
+            <img src="./public/images/images-26/Cameras.png" alt="" />
+          </div>
+          <div>
+            <h1 class="text-sm md:text-lg text-white md:ml-2 pb-2">Gamepads</h1>
+            <img src="./public/images/images-26/Gamepads.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- ===================== -->
+      <div
+        class="md:mx-auto lg:mx-0 rounded-xl flex flex-col justify-between items-center p-14 w-full md:w-[346px] h-[458px] bg-cover bg-no-repeat bg-center bg-[url('/public/images/images-26/Headphone.png')]"
+      >
+        <p class="text-blueBlack text-center text-[22px] font-medium w-56">
+          Register now and get you 15% discount as a new customer
+        </p>
+        <button
+          class="px-7 py-3 text-sm lg:text-lg text-white bg-[#482BE7] rounded-full hover:shadow-xl hover:bg-blue-600 transition duration-200"
+        >
+          Get 15% Discount
+        </button>
+      </div>
+    </div>
+    <script src="./public/js/app.js"></script>
+    <script src="./node_modules/flowbite/dist/flowbite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>
 </html>
